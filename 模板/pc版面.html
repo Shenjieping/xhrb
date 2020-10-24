@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<title>新华日报</title>
+		<link type="text/css" rel="stylesheet" href="../../../../../tqPaper/webcss/global.css">
+		<link type="text/css" rel="stylesheet" href="../../../../../tqPaper/webcss/layout.css">
+		<link href="../../../../../tqPaper/webcss/laydate.css" rel="stylesheet" type="text/css" />
+		<link href="../../../../../tqPaper/webcss/calendar.css" rel="stylesheet" type="text/css" />
+		<script src="../../../../../amucsite/common.js" type="text/javascript"></script>
+		<script type="text/javascript" src="../../../../../tqPaper/webjs/jquery-V30.min.js"></script>
+		<script type="text/javascript" src="../../../../../tqPaper/webjs/layout.js"></script>
+		<script type="text/javascript" src="../../../../../tqPaper/webjs/jquery.validate.js"></script>
+		<script type="text/javascript" src="../../../../../tqPaper/webjs/jquery.metadata.js"></script>
+		<script type="text/javascript" src="../../../../../tqPaper/webjs/laydate.js"></script>
+		<script src="../../../../../tqPaper/webjs/calendar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../../../tqPaper/webjs/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../../../tqPaper/webjs/index1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../../../tqPaper/webjs/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../../../tqPaper/webjs/jquery.qrcode.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=432241"></script>
+		<link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style0_16.css?v=8105b07e.css">
+        <style type="text/css"></style>
+	</head>
+
+	<body>
+		<div class="papger-id">
+			<FOUNDER-XY type="paperlayout" data="">
+				${layout.paperID?c}
+			</FOUNDER-XY>
+		</div>
+		<!--content-->
+		<div class="Newslistbox" style=" background:url(../../../../../tqPaper/webimages/img16.jpg) center top no-repeat; background-size: 100% 100%">
+            <div class="head">
+                <ul class="user-info">
+                    <li>
+						<a href="javascript:void(0)" id="home-btn">
+							<span
+								class="icon"
+								style="background:url(../../../../../tqPaper/webimages/home.png) center top no-repeat; background-size: 100% 100%"></span>
+							<span>首页</span>
+						</a>
+                    </li>
+                    <!-- <li>
+                        <span
+                            class="icon"
+                            style="background:url(../../../../../tqPaper/webimages/my.png) center top no-repeat; background-size: 100% 100%"></span>
+                        <span>个人中心</span>
+                    </li> -->
+                    <li id="buy-inactive">
+						<a href="javascript:void(0);" id="buyBtn">
+							<span
+								class="icon"
+								style="background:url(../../../../../tqPaper/webimages/care.png) center top no-repeat; background-size: 100% 100%"></span>
+							<span>购买</span>
+						</a>
+                    </li>
+                    <li id="sso-inactive">
+                        <a href="javascript:void(0);" id="uname">
+                            <span
+                                class="icon"
+                                style="background:url(../../../../../tqPaper/webimages/login.png) center top no-repeat; background-size: 100% 100%"></span>
+                            <span id="name-text"></span>
+                        </a>
+                    </li>
+					<li id="sso-active">
+						<a onclick="ssologin()" href="javascript:void(0);" id="sso-active">
+							<span
+                                class="icon"
+                                style="background:url(../../../../../tqPaper/webimages/login.png) center top no-repeat; background-size: 100% 100%"></span>
+							<span>注册/登录</span>
+						</a>
+					</li>
+                    <li id="exit-active">
+                        <a class="exit" onclick="exit()" href="javascript:void(0);">退出</a>
+                    </li>
+                </ul>
+                <div class="logo-box">
+                    <a class="logo" href="javascript:;"><img src="../../../../../tqPaper/webimages/logo.png" /></a>
+                </div>
+            </div>
+			<div class="Newsmain">
+				<div class="Newsboxtit clearfix">
+					<!-- <form name="form1" action="/amucsite/amuc/ucmember/ucSearch.html?query" method="GET"  target="_blank"> -->
+						<label class="newssearch">
+							<input name="contentKey" id="bdcsMain"  type="text" size="20" maxlength="50" class="newstxt"  value="" />
+							<input class="newsbut" type="button" value="" onClick="searchBaiduByText()"/>
+						</label>
+						<!-- <h3><img src="../../../../../tqPaper/webimages/pic11.png" /></h3> -->
+                    <!-- </form> -->
+                    <div class="special-box" style="display: none;">
+                        <div class="special-title">专题</div>
+                        <ul class="special-list">
+                        </ul>
+                    </div>
+                    <div class="news-title">
+						<a href="javascript:void(0);" id="paper-name">新华日报</a>
+					</div>
+				</div>
+				<div class="newscon clearfix">
+					<div class="newsside">
+						<ul>
+							<li class="oneclick2">
+								<a class="Calendar" href="javascript:;"></a>
+								<div class="Datebox"><input type="button" id="startDate" value=""> </div>
+							</li>
+							<li class="oneclick5">
+								<a class="Special" href="javascript:;"></a>
+								<div class="special-stage-list">
+									<em class="Chunem"></em>
+									<img class="Chunkiconimg" src="../../../../../tqPaper/webimages/pic21.png" />
+									<div class="Specialiconlist"></div>
+									<img class="Chunkiconimg" src="../../../../../tqPaper/webimages/pic22.png" />
+								</div>
+							</li>
+							<li class="oneclick1">
+								<a class="Chunkicon" href="javascript:;"></a>
+								<div class="Chunkiconbox">
+									<em class="Chunem"></em>
+									<img class="Chunkiconimg" src="../../../../../tqPaper/webimages/pic21.png" />
+									<div class="Chunkiconlist">
+										<FOUNDER-XY type="paperlayout" data="">
+											<#list layout.siblings as sibling>
+												<p>
+													<a href="${sibling.url!}">第${sibling.layout!}版：${sibling.layoutName!}</a>
+													<a href="${sibling.pdfUrl!}" target=_blank></a>
+												</p>
+						            		</#list>
+										</FOUNDER-XY>
+									</div>
+									<img class="Chunkiconimg" src="../../../../../tqPaper/webimages/pic22.png" />
+								</div>
+							</li>
+							<li class="oneclick3">
+								<a class="Share" href="javascript:;"></a>
+								<div id="Sharelist" class="bdsharebuttonbox">
+									<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+									<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+									<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+								</div>
+							</li>
+							<li class="oneclick4">
+								<a class="Phone" href="javascript:;"></a>
+								<div class="Phonecode">
+									<img src="" />
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="+div">
+						<a class="newsreturn" href="javascript:void(0)"></a>
+						<div class="newsconimg" style="position: relative;">
+							<FOUNDER-XY type="paperlayout" data="">
+								<img src="${layout.picUrl!}" USEMAP=#PagePicMap>
+								${layout.mapping!}
+							</FOUNDER-XY>
+						</div>
+						<div class="newsconright">
+							<div class="Scrollbox" id="Scroll">
+								<div class="newsshow" id="ScroLeft">
+									<div class="newslisttit">
+										<FOUNDER-XY type="paperlayout" data="">
+											<span class="newstime">${layout.date?string("yyyy年MM月dd日")! }</span>
+											<img class="newstitimg" src="../../../../../tqPaper/webimages/img18.jpg" />
+											<em>第${layout.layout!}版：${layout.layoutName!}</em>
+										</FOUNDER-XY>
+									</div>
+									<div class="newslist">
+										<ul>
+											<FOUNDER-XY type="paperlayout" data="">
+												<#list layout.articles as article>
+													<li>
+														<h3><a href="${article.url!}" >${article.title!}</a></h3>
+														<p>
+															${article.summary!}
+														</p>
+													</li>
+												</#list>
+											</FOUNDER-XY>
+											
+										</ul>
+									</div>
+								</div>
+								<div class="Roller" id="ScroRight"><span id="ScroLine"></span></div>
+							</div>
+                            <div class="newsconrightcontent">
+                            <iframe name="tqb" id="" class="Ciframe" width="100%" height="100%" marginheight="0" marginwidth="0" scrolling="no" frameborder="0"><!--123--></iframe>
+                            </div>
+                            <!--日历 begin-->
+                            <div class="time-control" style="position: absolute;">
+                                <div class="data_box" id="data_box">
+                                    <table cellspacing="0" cellpadding="0" style="background-color:#fff;width:213px;">
+                                        <tbody>
+                                            <tr>
+                                                <td  style="background: #f6f6f6; text-align: center;border: 1px solid #ddd;padding: 0 2px;">
+                                                    <!--<img src="pre_year.gif" id="pre_y" onclick="changeY(-1);">-->
+                                                    <span style="margin-left: -3px;margin-right: 5px;" class="ft18 pointer ft18 arrow-left"   onclick="changeY(-1);"></span>		
+                                                    <!--<img id="pre_m" src="pre_month.gif">-->
+                                                </td>
+                                                <td>
+                                                    <table cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <select style="width: 64px; height: 24px; border: 1px solid #ddd;" id="year_box" onchange="changeDate();">
+                                                                    <script type="text/javascript">
+                                                                        yearList();
+                                                                    </script>
+                                                                </td>
+                                                                <td  align="center" style="background: #f6f6f6; text-align: center;border: 1px solid #ddd;padding: 0 2px;display: block;height: 22px;margin-right: 8px;"><span style="margin-left: 5px; margin-top: 6px;" class="ft18 pointer arrow-right"  onclick="changeY(1);"></span></td>
+                                                                <td  style="background: #f6f6f6; text-align: center;border: 1px solid #ddd;padding: 0 2px;" align="center"><span style="margin-right: 6px;" class="ft18 pointer arrow-left"  onclick="changeMn(-1);"></span></td>									
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td>
+                                                    <table  cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>
+                                                                    <select style="width: 59px; height: 24px; border: 1px solid #ddd;" id="month_box" onchange="changeDate();">
+                                                                    <script type="text/javascript">
+                                                                        monthList();
+                                                                    </script>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td  style="background: #f6f6f6; text-align: center;border: 1px solid #ddd;padding: 0 2px;">
+                                                    <span style="margin-left: 5px;" class="ft18 pointer arrow-right"  onclick="changeMn(1);"></span>
+                                                    
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table  cellspacing="0" cellpadding="0" class="data_table" id="data_table">
+                                        <thead>
+                                            <tr>
+                                                <th>日</th>
+                                                <th>一</th>
+                                                <th>二</th>
+                                                <th>三</th>
+                                                <th>四</th>
+                                                <th>五</th>
+                                                <th>六</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <script type="text/javascript">
+                                                tdlist();
+                                                loadCalendar();
+                                            </script>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--日历 end-->
+						</div>
+					</div>
+					<div class="newsnextleft" id="">
+						<FOUNDER-XY type="paperlayout" data="">
+							<#if layout.previous?exists >
+								<a href="${layout.previous.url!}">&nbsp;</a>
+							</#if>	
+						</FOUNDER-XY>	
+					</div>
+                    <div class="newsnextright" id="">
+						<FOUNDER-XY type="paperlayout" data="">
+							<#if layout.next?exists>
+								<a href="${layout.next.url!}">&nbsp;</a>
+							</#if> 	
+						</FOUNDER-XY>	
+					</div>
+				</div>
+			</div>
+            <div class="foot-bar" id="footBar">
+                <span class="title">集团数字报刊：</span>
+            </div>
+		</div>
+
+		<!--content-->
+		<!-- 广告页面，未登录时显示 -->
+        <div class="adv-bj">
+            <div class="adv-box">
+                <figure>
+                    <img src="/advert.png" />
+                </figure>
+                <div class="close-btn">
+                    <span>倒计时</span>
+                    <span id="time">10</span>
+                    <span>秒</span>
+                    <span class="line"></span>
+                    <span id="close">关闭</span>
+                </div>
+                <div class="adv-footer">
+                    <span>广告：欢迎注册新华报业集团数字报！</span>
+                    <a class="reg" href="javascript:void(0);" onclick="register()">注册</a>
+                </div>
+            </div>
+        </div>
+		<!-- 无权限阅读时显示提示弹框 -->
+		<div class="tipMsg">
+			<h1>阅读付费版面提示</h1>
+			<div class="buyTip">
+				<p style="text-align:left;">尊敬的读者：</p>
+				<p style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;感谢各位一如既往的信任和关爱，更感谢各位长期以来的支持。</p>
+				<p style="text-align:left;">
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;该数字报电子版半年内的所有报纸版面为免费阅读，其他版面开始收费阅读。更权威的资讯，更便捷的形式，更周到的服务将大幅提高读者的阅读体验。
+				</p>
+				<p style="text-align:left;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您可选择在线购买该数字报电子版，或者激活阅读卡。</p>
+			</div>
+			<div class="btnGroup">
+				<button class="pay-btn">在线购买</button>
+                <button class='active-btn'>激活报卡</button>
+                <button class="login-btn" onclick="ssologin()" style="display: none">您还未登录无法查看是否购买或激活，请您先点击我进行登录！</button>
+			</div>
+		</div>
+		<script src="../../../../../config/paperDomain.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../../../tqPaper/webjs/domainName.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../../../tqPaper/webjs/sso-login.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../../../tqPaper/webjs/special.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../../../tqPaper/webjs/qx.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			function searchBaiduByText() {
+				var s = document.getElementById("bdcsMain");
+				var paperId = $(".papger-id").text().trim();
+				if (s.value.trim().length <= 0) {
+					alert("请输入搜索内容!");
+					return;
+				}
+				var targeturl = "http://" + location.host + "/amucsite/amuc/ucmember/ucSearch.html?query=" + s.value.trim() + "&paperId=" + paperId;
+				window.open(targeturl, "_blank");
+			}
+		</script>
+	</body>
+	<script type="text/javascript">
+		
+		
+        /* $(".newslist a").click(function(event){
+			var href = $(this).attr("href");
+			$(".Ciframe").attr("src",href);
+			$(".newsreturn").show();
+			$(".newsconrightcontent").show();
+			event.preventDefault();
+	    })
+		
+		$(".newsreturn").click(function(){
+			$(".newsreturn").hide();
+			$(".newsconrightcontent").hide();
+		})
+		
+		laydate({
+			elem: '#startDate'
+		}) */
+	</script>
+
+	<script>
+		window._bd_share_config = {
+			"common": {
+				"bdSnsKey": {},
+				"bdText": "",
+				"bdMini": "2",
+				"bdMiniList": false,
+				"bdPic": "",
+				"bdStyle": "0",
+				"bdSize": "16"
+			},
+			"share": {}
+		};
+		with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+	</script>
+ <!--用于实现数字报对文章页的分享功能 tip:请先引入jQuery框架-->
+    <!--<script src="http://www.sznews.com/js/shuzibao/share_all_page.js"></script> -->
+</html>

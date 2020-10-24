@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+		<FOUNDER-XY type="paperlayout" data="">
+		<title>${layout.layoutName}</title>
+		</FOUNDER-XY>
+		<link rel="stylesheet" type="text/css" href="../../../../../tqPad/css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="../../../../../tqPad/css/calendar.css"/>
+		<link type="text/css" rel="stylesheet" href="../../../../../tqPad/css/style.css-v=6.css">
+		<link type="text/css" rel="stylesheet" href="../../../../../tqPad/css/swiper3.1.0.min.css-v=2.css">
+		<link rel="stylesheet" type="text/css" href="../../../../../tqPad/css/index.css"/>
+		<script src="../../../../../tqPad/js/jquery-2.1.4.min.js"></script>
+		<script src="../../../../../tqPad/js/swiper.js" ></script><!--图片切换js -->  
+		<script src="../../../../../tqPad/js/bootstrap.min.js"></script>
+		<script src="../../../../../amucsite/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../../../amucsite/sso-cfg.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script type="text/javascript" src="../../../../../amucsite/payPaper/pad/sso/cookie.js" type="text/javascript" charset="utf-8"></script>--><!--时间控件js -->
+		<script type="text/javascript" src="../../../../../tqPad/js/cookie.js" type="text/javascript" charset="utf-8"></script><!--时间控件js -->
+		<script src="../../../../../tqPad/js/getCookie.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../../../../tqPad/js/chargeGlobal.js"></script><!--收费报纸js -->
+		<!--<script type="text/javascript" src="../../../../../amucsite/payPaper/pad/static/js/freeGlobal.js"></script>--><!--免费报纸js -->
+		<script src="../../../../../tqPad/js/calendar.js" type="text/javascript" charset="utf-8"></script><!--时间控件js --> 
+		<script src="../../../../../tqPad/js/index.js" type="text/javascript" charset="utf-8"></script><!--时间控件js -->
+		
+	</head>
+
+	<body>
+        <div class="papger-id">
+            <FOUNDER-XY type="paperlayout" data="">
+                ${layout.paperID?c}
+            </FOUNDER-XY>
+        </div>
+		<div id="orientLayer" class="mod-orient-layer">
+			<div class="content"><i class="icon-orient"></i>
+				<div class="desc">为了更好的体验，请使用竖屏浏览</div>
+			</div>
+		</div>
+		<header class="header box">
+			<div class="logo">
+				<FOUNDER-XY type="paperlayout" data="">
+				<span class="paperName">${layout.paper}</span>
+				<div style="display: none;" id="paperdate">${layout.date?string("yyyy年MM月dd日") }</div>
+				<div style="display:none" class="siteID">1</div>
+			</div>
+				<a id="date-btn" class="date box box-pack" href="javascript:void(0)" aria-haspopup="true" aria-expanded="false" aria-readonly="false" aria-owns="P1051947529_root _submit">${layout.date?string("dd")}</a>
+			</FOUNDER-XY>
+		</header>
+		<!--版面切换头部-->
+		<!--目录头部-->
+		<div class="main">
+			<div id="J_main_inside" class="main-inside clearfix">
+				<div class="swiper-container fl scroller">
+					<FOUNDER-XY type="paperlayout" data="{'scrollFlag':'true'}">
+						<#list layouts as layout>
+							<map id="newbook_${layout.id?c}" name="newbook_${layout.id?c}"></map>      	
+						</#list>
+					</FOUNDER-XY>
+					<div class="swiper-wrapper">
+						<FOUNDER-XY type="paperlayout" data="{'scrollFlag':'true'}">
+							<#list layouts as layoutlist>
+								<#if layoutlist.id==layout.id>
+								<div version="${layoutlist.layout}"  lid="${layoutlist.id?c}" onload_img="${layoutlist.picUrl!}" class="swiper-slide swiper-slide-active">
+									<img id="img_${layoutlist.id?c}" src="${layoutlist.picUrl!}"   usemap="#newbook_${layoutlist.id?c}" />
+								</div>
+								<#else>
+								<div version="${layoutlist.layout}"  lid="${layoutlist.id?c}" onload_img="${layoutlist.picUrl!}" class="swiper-slide">
+									<img id="img_${layoutlist.id?c}" src="${layoutlist.picUrl!}"  usemap="#newbook_${layoutlist.id?c}" />
+								</div>
+								</#if>
+							</#list>
+						</FOUNDER-XY>
+					</div>
+				</div>
+				<div id="J_news_wrap" class="news-list-wrap fl hide1"></div>				
+			</div>
+			<div id="J_news_btn" class="control" data-status="close"></div>
+		</div>
+		<div id="J_nav" class="nav">
+			<ul class="frame">
+				<li>
+					<FOUNDER-XY type="paperlayout" data="">
+						<p id="nowLayout" style="display:none">${layout.id?c}</p>
+						<div class="sub-nav">
+							<div class="" id="nav-div-box">
+								<#list layout.siblings as sibling>
+									<div class="">
+										<a href="${sibling.urlPad}" data-id="${sibling.id?c}">(${sibling.layout}) ${sibling.layoutName}</a>
+									</div>
+								</#list>
+							</div>
+							<div class="nb">已显示全部</div>
+						</div>
+				</li>
+				</FOUNDER-XY>
+			</ul>
+        </div>
+        <!-- 专题列表 -->
+        <div class="specail-box" id="specail">
+            <div class="left">专题</div>
+            <div class="specail-nav">
+                <ul class="special-list"></ul>
+            </div>
+        </div>
+		<div class="time-control hide1">
+			<!--日历 begin-->
+			<div class="data_box" id="data_box">
+		 	 	<table cellspacing="0" cellpadding="0" class="dataTable">
+					<tbody>
+						<tr>
+							<td class="hide1">
+								<span class="mr15 ft18 pointer" class="ft18"  onclick="changeY(-1);">‹</span>		
+							</td>
+							<div class="dataTop">
+			 					<td>
+			 						<table cellspacing="0" cellpadding="0">
+			 							<tbody>
+			 								<tr>
+								 				<td class="yp">
+								 					<select style="border:none; outline:none;" id="year_box" onchange="changeDate();">
+														<script type="text/javascript">
+															yearList();
+														</script>
+													</select>
+													<span class="Ye">年</span>
+												</td>
+												<td class="hide1" align="center"><span class="ft18 ml15 pointer"  onclick="changeY(1);">›</span></td>
+												<td align="center"><span style="margin-right: 10px;" class="ft18 pointer MonBefore"  onclick="changeMn(-1);"></span></td>									
+			 								</tr>
+			 							</tbody>
+			 						</table>
+			 					</td>
+			 					<td>
+									<table  cellspacing="0" cellpadding="0">
+								 		<tbody>
+								 			<tr>
+									 			<td class="mp">
+									 				<select style="border:none; outline:none;" id="month_box" onchange="changeDate();">
+												 		<script type="text/javascript">
+												 			monthList();
+												 		</script>
+											 		</select>
+											 		<span class="MZ">月</span>
+										 		</td>
+									 		</tr>
+			 							</tbody>
+									</table>
+								</td>
+							</div>
+						 	<td>
+						 		<span class="MonAfter" class="ft18 pointer"  onclick="changeMn(1);"></span>
+						 		
+						 	</td>
+						</tr>
+		 			</tbody>
+		 	 	</table>
+				<table  cellspacing="0" cellpadding="0" class="data_table" id="data_table">
+					<thead>
+						<tr>
+							<th>日</th>
+              <th>一</th>
+							<th>二</th>
+							<th>三</th>
+							<th>四</th>
+							<th>五</th>
+							<th>六</th>
+						</tr>
+					</thead>
+					<tbody>
+						<script type="text/javascript">
+							tdlist();
+						 	loadCalendar();
+						</script>
+					</tbody>
+                </table>
+                <button class="date-back">返回</button>
+			</div>
+ 			<!--日历 end-->
+			<!--</div>-->
+			</div>
+			<div id="catalog" class="catalog">
+				<ul>
+					<FOUNDER-XY type="paperlayout" data="{'scrollFlag':'true'}">
+						<#list layouts as layout>
+							<li class="verson"><span class="colorf34548">${layout.layout}</span>版</li>
+							<#list layout.articles as article>
+								<li>
+									<a href="${article.urlPad}">${article.title}</a>
+								</li>
+							</#list>
+						</#list>
+					</FOUNDER-XY>
+				</ul>
+			</div>	
+		<!-- 导航遮罩 -->
+		<div id="J-nav-mask" class="nav-mask"></div>
+		<!-- 引导遮罩 -->
+		<div id="J-guide-mask" class="guide-mask"></div>
+		<div class="screen hide1"></div>
+		<div>
+			<div class="payTip">
+				<img class="closeBtn" src="../../../../../tqPad/images/14.png"/>
+				<div>此套餐需要付费后才能阅读</div>
+				<button class="activePaper">
+					<span>激活报卡</span>
+				</button>
+				<button class="buyPaper">
+					<span>购买报纸</span>
+				</button>
+			</div>
+        </div>
+        <!-- 专题期列表 -->
+        <div class="special-stage">
+            <div class="stage-box">
+                <ul class="stage-list"></ul>
+            </div>
+        </div>
+        <!-- 登录提示框 -->
+        <div class="no-login">
+            <div class="no-login-box">
+                <p>您好，为了提升您的阅读体验，请您先登录</p>
+                <button class="go-login">去登录</button>
+            </div>
+        </div>
+        <!-- 无权限提示框 -->
+        <div class="no-auth">
+            <div class="no-auth-box">
+                <span class="close-noauth">X</span>
+                <p>本期报纸需要付费才能阅读，请您去网站购买</p>
+            </div>
+        </div>
+		
+		<footer id="footer">
+			<ul>
+				<li>
+                    <a id="page-btn" class="box box-pack box-align" href="javascript:;">
+                        报纸
+                        <span id="J_page_btn" data-status="close" style="display: none;">01</span>
+                        <span id="J_page_id" data-status="close" style="display: none;">01</span>
+                    </a>
+                </li> 
+                <li><a id="specail-btn" class="box box-pack box-align" data-status="close" href="javascript:;">专题</a></li>
+                <li><a id="catalog-btn" class="box box-pack box-align" data-status="close" href="javascript:;">目录</a></li>
+				<li><a id="date-btn" class="date box box-pack bDate" href="javascript:;">往期</a></li>
+				<li class="userIcon">
+					<a id="date-btn" class="date box box-pack uDate userImg" href="javascript:;">登录</a>
+				</li>
+				<li class="userNM" style="display: none;">
+					<a class="personCenter uDate" href=""><span style="display: none;" class="userName"></span></a>
+				</li>
+			</ul>
+		</footer>
+		
+		<script src="../../../../../config/paperDomain.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../../../tqPad/js/domainName.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../../../tqPad/js/special.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../../../tqPad/js/qx.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			var GLOBAL = {
+				// 当前页面
+				pageName: ''
+			};
+		</script>
+		<script>
+			// 当前页面
+			GLOBAL.pageName = 'index';
+		
+		</script>
+        <script type="text/javascript">
+            // var vConsole = new VConsole();
+            // console.log('Hello world');
+			<FOUNDER-XY type="paperlayout" data="{'scrollFlag':'true'}">
+			<#list layouts as layout>
+			var map_${layout.id?c} = ${layout.mapping};
+			</#list>
+			</FOUNDER-XY>
+		</script>
+		<script src="../../../../../tqPad/js/fastclick.js"></script><!--点击事件延迟处理 -->
+		
+	</body>
+
+</html>

@@ -1,0 +1,26 @@
+/*网站基本定义*/
+div,form,img,ul,ol,li,dl,dt,dd,p,tr,td,body,strong,span,pre,input{margin:0; padding:0; border:0; background-repeat:no-repeat; -webkit-appearance:none; border-radius:none;}
+h1,h2,h3,h4,h5,h6,p{ margin:0; padding:0; font-weight:normal;}
+body{font-family:"Microsoft Yahei";font-size:14px;margin:0px;padding:0px;color:#666;line-height:24px;height:auto;clear:both; -webkit-appearance:none; }
+img{border:0px;}
+html,body{height: 100%;width: 100%;}
+ul,li{ list-style:none;}
+em,i{ font-style:normal;}
+a{ text-decoration:none; color:#000; outline:none; cursor:pointer;}
+a:hover{ background-repeat:no-repeat; color:#000;}
+.del_float{ clear:both; line-height:0; height:0; font-size:0;}
+a,area{blr:expression(this.onFocus=this.blur())}
+
+/*网站基本定义*/
+
+.clearfix:after{visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+.clearfix{*zoom:1;}
+.qf{clear:both;}
+
+
+.web{width:1170px;margin:auto;}
+.box{width:1170px;margin:auto;background:url(../webimages/wwimg04.jpg) repeat-y #ffffff;}
+.webbg{background:#f7f7f7; padding:35px 0px;}
+.webleft{float:left;width:276px;}
+.webright{float:right; width:827px; padding:30px 30px 47px 0px;}
+.del_float{ clear:both; line-height:0; height:0; font-size:0;}

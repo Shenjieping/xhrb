@@ -1,0 +1,164 @@
+html {
+	font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #333
+}
+
+a {
+	text-decoration: none;
+	color: #333
+}
+
+table thead th {
+	width: 14.285714286%;
+	font-size: 16px;
+	padding-bottom: .25em;
+	color: #999;
+	font-weight: 500;
+	line-height: 2.5em
+}
+
+.show_mn {
+	text-align: center;
+	padding: 0 20px
+}
+
+.data_box {
+	width: 85%;
+	font-size: 12px;
+	position: relative;
+	height: 300px;
+	text-align: center;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#pre_y,
+#pre_m,
+#next_y,
+#next_m {
+	width: 16px;
+	height: 16px;
+	border: solid;
+	border-color: white;
+	cursor: hand
+}
+
+#data_table {
+	text-align: center;
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+	font-size: inherit;
+	width: 100%;
+	margin-bottom: .5em;
+	background-color: #fff;
+	margin-top: 25px
+}
+
+.ft18 {
+	font-size: 18px
+}
+
+.mr15 {
+	margin-right: 15px
+}
+
+.ml15 {
+	margin-left: 15px
+}
+
+.pointer {
+	cursor: pointer
+}
+
+* {
+	margin: 0;
+	padding: 0
+}
+
+li {
+	list-style: none
+}
+
+.active:hover {
+	background-color: #ddd;
+}
+
+#data_table span {
+	height: 20px;
+    text-align: center;
+    /* padding-left: 3px; */
+    margin-bottom: 5px;
+    line-height: 20px;
+    color: #333;
+    display: block;
+}
+#data_table span.date-handler {
+    background: #fff;
+    cursor: pointer;
+    display: block;
+    color: #000;
+    /* border: 1px solid red; */
+    border-radius: 3px;
+    margin-right: 5px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 102, 102, 0.54);
+}
+#data_table span.active1 {
+    color: #fff;
+    width: auto;
+    background-color: #f34547;
+    color: #fff;
+    border-radius: 0;
+    position: relative;
+}
+#data_table span.active1::before {
+    content: '';
+    height: 0;
+    width: 0;
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    border: 3px solid #fff;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
+
+.time-control {
+	display: block;
+	position: absolute;
+	bottom: 100px;
+	z-index: 998;
+	/*margin-top: -130px;*/
+	right: 0;
+	margin-left: -175px
+}
+.div1{
+	position: absolute;
+    left: -18px;
+    top: -14px;
+    /*width: 12px;*/
+
+}
+.date-back {
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: #E0534E;
+    font-size: 16px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 30px;
+    border-radius: 4px;
+}
+@media only screen and (max-width:320px ) {
+	.time-control{
+		right: -22px;
+	}
+}

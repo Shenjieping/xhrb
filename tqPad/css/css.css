@@ -1,0 +1,158 @@
+.wrap{
+	width: 1000px;
+	margin: 0 auto;
+}
+.header .blueLine{
+	background: url(../images/01.png) repeat-x;
+	height: 7px;
+}
+.header-mid{
+	background: url(../images/02.png) repeat-x;
+	height: 133px;
+}
+.header-bottom{
+	background: url(../images/03.png) repeat-x;
+	height: 28px;
+}
+.header-time{
+	margin: 18px 0;
+}
+
+.content{
+	margin-top: 20px;
+}
+.newspaper-pic{
+	width: 358px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.preview{
+	border: 1px solid #cbcbcb;
+	box-shadow:3px 3px 3px #bcbcbc;
+	width: 348px;
+    height: 498px;
+	margin: 0 20px 20px 0;   
+}
+.ad{
+	border: 1px solid #cbcbcb;
+}
+
+.news{
+	width: 388px;
+}
+.newsList li{
+	line-height: 23px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+.newsList li img{
+	padding: 0 10px 0 8px;
+}
+/* .active1{
+	background-color: #D9383D !important;
+	color: #fff !important;
+} */
+
+.content .news-title{
+	height: 37px;
+	line-height: 37px;
+	background-color: #1b5fa6;
+	padding: 0 20px;
+	color: #fff;
+}
+.content .news-title a{
+	color:#fff;
+}
+.time-control-title{
+	height: 24px;
+    line-height: 24px;
+    background-color: #1b5fa6;
+    color: #fff;
+    margin-top: 15px;
+}
+.page{
+	width: 215px;
+}
+.newsList{
+	border-bottom: 1px solid #cbcbcb;
+}
+.newsList li:nth-child(1){
+	margin-top: 10px;
+}
+.page-num{
+	border-bottom: 6px solid #cbcbcb;
+} 
+.page-num li{
+	height: 30px;
+	line-height: 30px;
+	padding: 0 15px;
+	cursor: pointer;
+}
+.page-num li span{
+	display: inline-block;
+    width: 165px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #373535;
+}
+.nav a,.newsList li a,.preart,.nextArt{
+	color: #373535;
+}
+.newsList li a{
+	display: block;
+    float: right;
+    width: 360px;
+}
+.page-num li:nth-child(odd){
+	background-color: #f2f2f3;
+	
+}
+.pdf{
+	right: 10px;
+	top: 8px;
+}
+
+.detail{
+	width: 622px;
+}
+.detail-title{
+	height: 37px;
+	line-height: 37px;
+	background-color: #1b5fa6;
+	color: #fff;
+	padding: 0 20px;
+}
+.detail-art{
+	border-bottom: 2px solid #cbcbcb;
+}
+.detail-art p{
+	text-indent: 2em;
+	margin: 30px 0;
+	line-height: 27px;
+}
+.detail-art h2{
+	font-size: 30px;
+    font-family: 微软雅黑;
+}
+.detail-art p:nth-child(1){
+	text-indent: 0;
+    font-size: 16px;
+    margin: 20px 0;
+    margin-bottom: 10px;
+}
+
+
+.bottom{
+	height: 37px;
+	line-height: 37px;
+	background-color: #1b5fa6;
+	text-align: center;
+	color: #fff;
+}
+.bottom a,.detail-title a{
+	color: #fff;
+}
+.swiper-container{
+	opacity: 0;
+}

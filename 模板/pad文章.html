@@ -1,0 +1,71 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <FOUNDER-XY type="paperarticle" data="">
+	<title>${article.title}</title>
+	</FOUNDER-XY>
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../../../../../tqPad/css/news.css" >
+    <link rel="stylesheet" href="../../../../../../tqPad/css/reader.css">
+	</head>
+<body style="display:none;">
+    <div class="papger-id">
+        <FOUNDER-XY type="paperlayout" data="">
+            ${article.layout.paperID?c}
+        </FOUNDER-XY>
+    </div>
+    <div id="main">
+        <div id="scroller">
+            <div class="caption">
+                <a name="top" id="top"></a>
+                <font id="guide"></font>
+                 <FOUNDER-XY type="paperarticle" data="">
+				<p id="nowLayout"  class="hide">${article.layout.layout}</p>
+				<font id="intro-title">${article.introTitle}</font>
+				<font id="main-title">${article.title}</font>
+                <font id="sub-title">${article.subTitle}</font>
+                <font id="author">${article.layout.date?string("yyyy年MM月dd日") }</font>
+            </div>
+            <div class="content" id="content">
+					 <#list article.attachments as attachment>
+				<img src="${attachment.urlPad}"  style="border-style: none"/>
+				<p>${attachment.content}</p>
+					</#list>  
+                    <founder-content>
+					${article.content}
+					</founder-content>
+            </div>
+        </div>
+    </div>
+	 </FOUNDER-XY>
+    <div id ="mask"></div>
+    
+    <a href="javascript:scroll(0,0)" id="toTop"></a>
+    
+    <div id="operate">
+        <ul>
+            <li><a href="javascript:backPage();" style="background-image:url(../../../../../../tqPad/images/back.png);"></a></li>
+            <li><a href="javascript:fontLarger();" style="background-image:url(../../../../../../tqPad/images/font-larger.png);"></a></li>
+            <li><a href="javascript:fontSmaller();" style="background-image:url(../../../../../../tqPad/images/font-smaller.png);"></a></li>
+        </ul>
+    </div>
+    <!-- 无权限提示框 -->
+    <div class="no-auth">
+        <div class="no-auth-box">
+            <p>本期报纸需要付费才能阅读，请您去网站购买</p>
+        </div>
+    </div>
+</body>
+<script src="../../../../../../tqPad/js/jquery.min.js" ></script>
+<script src="../../../../../../tqPad/js/jquery.mobile.custom.min.js" ></script>
+<script src="../../../../../../tqPad/js/iscroll.js" ></script>
+<script src="../../../../../../tqPad/js/simple-share.min.js" ></script>
+<script src="../../../../../../amucsite/common.js"></script>
+<script src="../../../../../../tqPad/js/getCookie.js"></script>
+<script src="../../../../../../tqPad/js/news.js" ></script>
+<script src="../../../../../../tqPad/js/qx.js"></script>
+<script src="../../../../../../tqPad/js/reader.js"></script>
+</html>

@@ -1,0 +1,881 @@
+.head {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+.logo {
+	float: left;
+	padding-top: 4px;
+}
+
+.logo img {
+	/* width:219px; height:67px;*/
+	display: block;
+}
+
+.headright {
+	float: right;
+	font-family: "SimSun";
+}
+
+.weather img {
+	width: 30px;
+	height: 26px;
+	vertical-align: -6px;
+}
+
+.headindex,
+.headtime,
+.weather {
+	padding-left: 13px;
+	line-height: 78px;
+}
+
+.banner {
+	width: 100%;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+}
+
+.banner img {
+	display: block;
+	width: 1920px;
+	height: 300px;
+	position: absolute;
+	left: 50%;
+	top: 0;
+	margin-left: -960px;
+}
+
+.indexMain {
+	background: url(../webimages/pic02.png) center bottom no-repeat;
+}
+
+.main {
+	width: 1100px;
+	margin: 0 auto;
+}
+
+
+/*综合页*/
+
+.Synthesize {
+	padding-top: 41px;
+	overflow: hidden;
+}
+
+.SynthesizeUp ul li {
+	width: 234px;
+	/*height:339px; */
+	float: left;
+	padding: 0 56px 12px 0;
+	margin-bottom: 24px;
+	font-size: 16px;
+	text-align: center;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+.SynthesizeUp ul {
+	width: 1200px;
+}
+
+.Synthesizeimg {
+	height: 339px;
+	position: relative;
+}
+
+.Synthesizeimg img {
+	display: block;
+	width: 224px;
+	height: 328px;
+	border: 1px solid #d8d8d8;
+}
+
+.SynthesizeUp ul li.noborder {
+	border-bottom: none;
+}
+
+.SynthesizeUp ul li.cur .Synthesizeimg img {
+	border: 1px solid #fff;
+}
+
+.SynthesizeUp ul li.cur .Synthesizeimg {
+	background: url(../webimages/pic03.png) no-repeat;
+}
+
+.Synmask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 227px;
+	height: 330px;
+	background: url(../webimages/pic04.png) repeat !important;
+	text-align: center;
+	z-index: 9;
+	display: none;
+}
+
+.Synmask span {
+	background: url(../webimages/pic06.png) no-repeat right 58px;
+	color: #fff;
+	font-size: 16px;
+	padding-right: 17px;
+	width: 69px;
+	height: 76px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 119px;
+}
+
+.Synmask img {
+	width: 41px !important;
+	height: 37px !important;
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 13px;
+	border: none !important;
+}
+
+.SynthesizeUp ul li.cur .Synmask {
+	display: block;
+}
+
+.Synthesizebot ul li {
+	width: 182px;
+	padding: 0 47px 12px 0;
+	border-bottom: none;
+}
+
+.Synthesizebot ul li .Synthesizeimg {
+	height: 262px;
+}
+
+.Synthesizebot ul li img {
+	width: 173px;
+	height: 254px;
+}
+
+.Synthesizebot ul li .Synmask {
+	width: 177px;
+	height: 256px;
+}
+
+.Synthesizebot ul li.cur .Synthesizeimg {
+	background: url(../webimages/pic07.png) no-repeat;
+}
+
+.Synthesizebot ul li.cur .Synmask span {
+	margin-top: 83px;
+}
+
+.foot {
+	border-top: 1px solid #dcdcdc;
+	background: #f5f5f5;
+}
+
+.footcon {
+	width: 1016px;
+	margin: 0 auto;
+}
+
+.footnav {
+	text-align: center;
+	padding-top: 25px;
+}
+
+.footnav a {
+	font-weight: bold;
+	font-size: 14px;
+	color: #666;
+	padding: 0 19px;
+}
+
+.footphone {
+	padding: 25px 0;
+	border-bottom: 1px solid #dcdcdc;
+	text-align: center;
+}
+
+.footphonecion {
+	text-align: center;
+	color: #666;
+	font-size: 16px;
+	background: url(../webimages/pic08.png) no-repeat;
+	padding-left: 29px;
+}
+
+.copyright {
+	padding: 22px 0 30px 0;
+}
+
+.footicon {
+	float: right;
+}
+
+.footicon p {
+	display: inline-block;
+	padding: 3px 15px 9px 9px;
+	background: #fff;
+}
+
+.copytext {
+	color: #666;
+	font-size: 13px;
+	line-height: 28px;
+}
+
+
+/*列表页*/
+
+.headlist {
+	width: 1180px;
+	height: 82px;
+	line-height: 82px;
+}
+
+.nav {
+	float: right;
+}
+
+.nav ul li {
+	float: left;
+}
+
+.nav ul li a {
+	padding: 0 2px;
+	display: block;
+}
+
+.nav ul li a.cur,
+.nav ul li a:hover {
+	color: #96c319;
+	background: #f3f7f2;
+}
+
+.headlist .logo {
+	padding-top: 15px;
+}
+
+.Newsmain {
+	width: 1180px;
+	margin: 0 auto;
+	padding-top: 25px;
+}
+
+.newssearch {
+	float: right;
+	padding-top: 15px;
+}
+
+.newstxt {
+	width: 143px;
+	height: 34px;
+	float: left;
+	line-height: 34px;
+	padding: 0 10px;
+	border: 1px solid #d9d9d9;
+	border-right: none;
+}
+
+input {
+	outline: none;
+}
+
+.newsbut {
+	float: left;
+	width: 36px;
+	height: 36px;
+	background: #8fc528 url(../webimages/pic10.png) center no-repeat;
+}
+
+.Newsboxtit h3 {
+	float: left;
+}
+
+.newscondiv {
+	background: #fff;
+	width: 1091px;
+	float: left;
+}
+
+.newscon {
+	padding-top: 25px;
+	position: relative;
+}
+
+.newsconimg {
+	width: 546px;
+	height: 776px;
+	float: left;
+	border-right: 1px solid #eaeaea;
+}
+
+.newsconimg img {
+	display: block;
+	width: 546px;
+	height: 776px;
+}
+
+.newslisttit {
+	color: #666;
+	font-size: 13px;
+	border-bottom: 1px solid #ddd;
+	padding: 0 0 5px 5px
+}
+
+.newstitimg {
+	vertical-align: -6px;
+	padding-right: 12px;
+}
+
+.newstime {
+	float: right;
+}
+
+.newsconright {
+	width: 525px;
+	float: left;
+	padding: 40px 0 19px 19px;
+	background: url(../webimages/img19.jpg) left top repeat-y;
+}
+.newsconright1{
+	width: 525px;
+	float: left;
+	padding: 40px 0 19px 19px;
+	background: url(../webimages/img19.jpg) left top repeat-y;
+}
+.Scrollbox {
+	width: 526px;
+	height: 717px;
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 18px;
+}
+
+.newslist ul {
+	padding-top: 30px;
+}
+
+.newslist ul li {
+	border-bottom: 1px dashed #dadada;
+	padding-bottom: 13px;
+	margin-bottom: 20px;
+	color: #666;
+}
+
+.newslist ul li h3 {
+	color: #333;
+	font-size: 24px;
+	margin-bottom: 13px;
+	line-height: 30px;
+	max-height: 60px;
+	overflow: hidden;
+}
+
+.newslist ul li p {
+	height: 72px;
+	overflow: hidden;
+}
+
+.newslist ul li h3 a {
+	color: #333;
+}
+
+.newslist ul li h3 a:hover {
+	color: #96c319;
+}
+
+.newsshow {
+	float: left;
+	position: relative;
+	padding-top: 18px;
+	width: 484px;
+	height: 717px;
+	overflow: hidden;
+}
+
+.Roller {
+	float: left;
+	width: 5px;
+	height: 716px;
+	background: #ececec;
+	margin-left: 24px;
+	z-index: 9;
+}
+
+.Roller span {
+	display: inline-block;
+	width: 5px;
+	height: 203px;
+	position: relative;
+	border-radius: 5px;
+	background: #ccc;
+	z-index: 10;
+}
+
+.Therest {
+	width: 100%;
+	height: 228px;
+	background: url(../webimages/pic12.png) repeat;
+}
+
+.Therestcon {
+	width: 1180px;
+	margin: 0 auto;
+	padding-top: 20px;
+	position: relative;
+	overflow: hidden;
+}
+
+.Therestlist {
+	width: 1042px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.Therestlist ul {
+	width: 9999px;
+}
+
+.Therestlist ul li {
+	width: 112px;
+	float: left;
+	margin-right: 43px;
+	color: #fff;
+	font-size: 14px;
+	position: relative;
+}
+
+.Therestlist ul li img {
+	display: block;
+	width: 112px;
+	height: 160px;
+	margin-bottom: 10px;
+}
+
+.Therestlist ul li p {
+	text-align: left;
+	line-height: 15px;
+}
+
+.Therestlist ul li p a {
+	color: #fff;
+	padding-right: 23px;
+	background: url(../webimages/pic13.png) no-repeat right center;
+}
+
+.restmask {
+	display: block;
+	width: 112px;
+	height: 160px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: url(../webimages/pic14.png) repeat !important;
+	display: none;
+}
+
+.Therestlist ul li.cur .restmask {
+	display: block;
+}
+
+.restleft,
+.restright {
+	display: block;
+	width: 30px;
+	height: 33px;
+	position: absolute;
+	top: 77px;
+}
+
+.restleft {
+	left: 0;
+	background: url(../webimages/pic15.png) no-repeat;
+}
+
+.restright {
+	right: 0;
+	background: url(../webimages/pic16.png) no-repeat;
+}
+
+.newsside {
+	float: left;
+	width: 52px;
+}
+
+.Chunkicon {
+	display: inline-block;
+	width: 52px;
+	height: 52px;
+	background: #904cd5 url(../webimages/pic17.png) no-repeat center;
+	overflow: hidden;
+}
+
+.Calendar {
+	display: inline-block;
+	width: 52px;
+	height: 52px;
+	background: #f2ab2a url(../webimages/pic18.png) no-repeat center;
+	overflow: hidden;
+}
+
+.Share {
+	display: inline-block;
+	width: 52px;
+	height: 52px;
+	background: #2a8df2 url(../webimages/pic19.png) no-repeat center;
+	overflow: hidden;
+}
+
+.Phone {
+	display: inline-block;
+	width: 52px;
+	height: 52px;
+	background: #73cd42 url(../webimages/pic20.png) no-repeat center;
+	overflow: hidden;
+}
+
+.newsside ul li {
+	width: 52px;
+	height: 52px;
+	position: relative;
+}
+
+.Chunkiconbox {
+	position: absolute;
+	top: 11px;
+	left: 59px;
+	display: none;
+	z-index: 999;
+}
+
+.Chunkiconimg {
+	float: left;
+	width: 257px;
+}
+
+.Chunkiconlist {
+	width: 238px;
+	float: left;
+	padding: 10px 0 15px 19px;
+	background: url(../webimages/pic23.png) repeat-y;
+}
+
+.Chunem {
+	width: 8px;
+	height: 14px;
+	display: block;
+	position: absolute;
+	left: -6px;
+	top: 11px;
+	background: url(../webimages/pic24.png) no-repeat;
+}
+
+.Chunkiconlist p {
+	height: 34px;
+	line-height: 34px;
+	padding-right: 25px;
+	overflow: hidden;
+}
+
+.Chunkiconlist p a {
+	display: block;
+	background: url(../webimages/pic25.png) no-repeat right center;
+}
+
+.Chunkiconlist p a:hover {
+	color: #333;
+	font-weight: bold;
+}
+
+.timeinout {
+	width: 52px;
+	height: 52px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #f2ab2a url(../webimages/pic18.png) no-repeat center;
+	text-indent: -900px;
+	overflow: hidden;
+	line-height: 500px;
+}
+
+#__calendarTable {
+	padding-left: 20px !important;
+}
+
+.timepop {
+	width: 309px !important;
+	height: 323px !important;
+	background: url(../webimages/pic26.png) no-repeat !important;
+	border: none !important;
+}
+
+.caleTable {
+	padding: 43px 0 0 20px !important;
+	background: none !important;
+	height: 260px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	width: 288px;
+}
+
+.TrUptab {
+	width: 270px !important;
+	height: 34px !important;
+	display: block;
+	background: url(../webimages/pic27.png) no-repeat !important;
+}
+
+#Sharelist {
+	width: 188px;
+	height: 60px;
+	position: absolute;
+	left: 52px;
+	top: 0;
+	padding: 10px 0 0 25px;
+	background: url(../webimages/pic28.png) no-repeat;
+	display: none;
+}
+
+#Sharelist a {
+	width: 34px;
+	height: 34px;
+	margin: 0 7px;
+	padding: 0;
+}
+
+#Sharelist a.bds_weixin {
+	background: url(../webimages/pic29.png) no-repeat;
+}
+
+#Sharelist a.bds_tsina {
+	background: url(../webimages/pic30.png) no-repeat;
+}
+
+#Sharelist a.bds_qzone {
+	background: url(../webimages/pic31.png) no-repeat;
+}
+
+.newsnext {
+	float: left;
+	width: 36px;
+}
+
+.newsnext a {
+	width: 18px;
+	height: 81px;
+	display: block;
+	color: #fff;
+	font-size: 16px;
+	line-height: 21px;
+	padding: 15px 9px 0 10px;
+	margin-bottom: 4px;
+	background: url(../webimages/pic32.png) no-repeat;
+}
+
+
+/*详细页*/
+
+.backlist {
+	display: block;
+	width: 62px;
+	height: 39px;
+	background: url(../webimages/pic33.png) no-repeat;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: 8px;
+	display: none;
+}
+
+.Therestlist ul li.curshow .restmask {
+	display: block;
+}
+
+.newsdetatit {
+	border-bottom: 1px solid #ddd;
+	padding: 0 10px 5px 10px;
+	color: #999;
+	font-size: 13px;
+}
+
+.newsdetatit h3 {
+	color: #333;
+	font-size: 24px;
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+.Author {
+	float: right;
+}
+
+.newsdetatext {
+	color: #4c4c4c;
+	padding: 20px 12px 0 12px;
+}
+
+.Phonecode {
+	position: absolute;
+	left: 52px;
+	top: 0;
+	width: 174px;
+	height: 168px;
+	background: url(../webimages/pic34.png) no-repeat;
+	display: none;
+}
+
+.Phonecode img {
+	display: block;
+	width: 147px;
+	height: 147px;
+	margin: 9px 0 0 15px;
+}
+
+#goPrevMonthButton {
+	width: 27px;
+	height: 26px;
+	background: url(../webimages/pic35.png) no-repeat center !important;
+	border: none !important;
+}
+
+#goNextMonthButton {
+	width: 27px;
+	height: 26px;
+	background: url(../webimages/pic36.png) no-repeat center !important;
+	border: none !important;
+}
+
+#yearSelect {
+	width: 69px;
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 14px;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+select {
+	outline: none;
+}
+
+#monthSelect {
+	background: none;
+	border: none;
+	color: #fff;
+	font-size: 14px;
+	appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+}
+
+#yearSelect option {
+	display: none;
+	height: 0;
+	outline: none;
+}
+
+#monthSelect option {
+	display: none;
+	height: 0;
+	outline: none;
+}
+
+.caleTable tr {
+	display: block;
+}
+
+.theader {
+	width: 38px !important;
+	height: 37px !important;
+	padding: 0 !important;
+	background: none !important;
+	font-size: 14px;
+	color: #4c4c4c !important;
+	border: none !important;
+	font-family: "Microsoft Yahei";
+}
+
+.caleTable td {
+	width: 39px !important;
+	height: 37px !important;
+	border: none !important;
+	display: block;
+	background: #f9f9f9;
+	float: left !important;
+	padding: 0;
+	color: #333 !important;
+	font-size: 14px;
+	font-family: "Microsoft Yahei";
+	line-height: 37px;
+}
+
+.caleTable td.sat {
+	color: #333;
+}
+
+.caleTable td.sun {
+	color: #333;
+}
+
+.monwidth {
+	width: 194px;
+}
+
+#closeButton {
+	position: absolute;
+	top: 9px;
+	right: 17px;
+	border: none;
+	font-family: "Microsoft Yahei";
+	width: 48px;
+	height: 26px;
+	line-height: 26px;
+	cursor: pointer;
+}
+
+.Datebox {
+	width: 52px;
+	height: 52px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 0;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+#startDate {
+	width: 52px;
+	height: 52px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	background: none;
+	line-height: 500px;
+	overflow: hidden;
+	line-height: 50000px;
+	overflow: hidden;
+}
+.articleContent{
+	position: absolute;
+    z-index: 100;
+    width: 544px;
+    height: 800px;
+    top: 0;
+    display: none;
+    background-color: #fff;
+    left: 0;
+}
+.articles{
+	width: 500px;
+	height: 770px;
+}
